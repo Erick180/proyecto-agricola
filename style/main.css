@@ -1,0 +1,225 @@
+/* Estilos base */
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Estilos del mapa D3 --- */
+.node circle {
+    cursor: pointer;
+    stroke-width: 2.5px;
+    transition: all 0.3s ease;
+}
+
+.node:hover>circle {
+    transform: scale(1.2);
+    stroke-width: 4px;
+}
+
+.node text {
+    font-size: 14px;
+    pointer-events: none;
+    transition: fill 0.3s ease;
+}
+
+.node .icon {
+    font-size: 18px;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.node.selected>circle {
+    stroke-width: 5px;
+    stroke: #ef4444;
+    transform: scale(1.1);
+    animation: pulse 0.3s ease-out;
+}
+
+.link {
+    fill: none;
+    stroke-opacity: 0.6;
+    stroke-width: 2.5px;
+    transition: stroke 0.3s ease;
+}
+
+/* --- Panel lateral y scrollbar --- */
+.info-panel {
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transform: translateX(100%);
+    opacity: 0;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.info-panel:hover {
+    scrollbar-color: #a0aec0 #e2e8f0;
+}
+
+.info-panel.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#info-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+#info-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#info-content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#info-content:hover::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+}
+
+#image-container img {
+    border: 1px solid #e2e8f0;
+}
+
+/* --- Controles de UI --- */
+#ui-controls {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.control-btn {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.control-btn:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    transform: scale(1.05);
+}
+
+/* --- Leyenda --- */
+#legend {
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+#legend h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+}
+
+#legend .legend-item {
+    margin-bottom: 0.125rem;
+}
+
+#legend .legend-item span {
+    font-size: 0.7rem;
+}
+
+/* --- Tooltip --- */
+#tooltip {
+    position: absolute;
+    background-color: rgba(17, 24, 39, 0.9);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    max-width: 250px;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 20;
+}
+
+/* --- Modo Oscuro --- */
+body.dark {
+    background-color: #111827;
+    color: #d1d5db;
+}
+
+body.dark .node text {
+    fill: #d1d5db;
+    text-shadow: 0 1px 1px #000, 1px 0 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+body.dark .link {
+    stroke: #4b5563;
+}
+
+body.dark .info-panel {
+    background-color: #1f2937;
+    color: #d1d5db;
+    border-left-color: #374151;
+}
+
+body.dark #info-content:hover {
+    scrollbar-color: #4b5563 #1f2937;
+}
+
+body.dark #info-content:hover::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+}
+
+body.dark #legend,
+body.dark #ui-controls {
+    background-color: rgba(31, 41, 55, 0.8);
+    border: 1px solid #374151;
+}
+
+body.dark .control-btn {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+body.dark .control-btn:hover {
+    background-color: #4b5563;
+}
+
+body.dark #home-btn {
+    background-color: #1f2937;
+    color: #d1d5db;
+    border-color: #374151;
+}
+
+body.dark #home-btn:hover {
+    background-color: #4b5563;
+}
+
+body.dark #panel-footer {
+    border-top-color: #374151;
+}
