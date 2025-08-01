@@ -50,12 +50,18 @@ body {
     animation: pulse 0.3s ease-out;
 }
 
+/* === BLOQUE MODIFICADO === */
 .link {
     fill: none;
+    stroke: #9CA3AF;
+    /* <-- AÑADIDO: Color gris para las líneas, visible en modo claro */
     stroke-opacity: 0.6;
     stroke-width: 2.5px;
     transition: stroke 0.3s ease;
 }
+
+/* === FIN DEL BLOQUE MODIFICADO === */
+
 
 /* --- Panel lateral y scrollbar --- */
 .info-panel {
