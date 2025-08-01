@@ -52,11 +52,11 @@
                     "imagen": "images/insecta.jpg",
                     "children": [
                         {
-                            "name": "CompleteClassification",
+                            "name": "Grupos Taxonómicos",
                             "commonName": "Clasificación Completa de Órdenes",
                             "level": "Agrupación",
                             "icon": "📚",
-                            "description": "Contiene los 28 órdenes de insectos para una referencia taxonómica exhaustiva.",
+                            "description": "Esta sección ofrece una referencia taxonómica exhaustiva de los 28 órdenes de insectos, un recurso fundamental para el estudio en profundidad de la entomología. Está diseñada para facilitar un estudio más activo y detallado, ayudando a estudiantes y profesionales a conocer, identificar y profundizar en la clasificación de estos organismos. Es una herramienta clave para comprender la diversidad del mundo de los insectos y su rol en el ámbito agrícola.",
                             "children": [
                                 { "name": "Archaeognatha", "commonName": "Arqueognatos", "level": "Orden", "icon": "🦗", "description": "Insectos primitivos sin alas (ápteros) con cuerpo cilíndrico y tres apéndices caudales largos. Sus ojos compuestos son grandes y se tocan en la línea media de la cabeza. Poseen la habilidad única de saltar flexionando su abdomen, lo que los diferencia de otros insectos primitivos. Son considerados fósiles vivientes.", "importanciaAgricola": "No tienen importancia agrícola directa. Son detritívoros, alimentándose de algas, líquenes y materia orgánica en descomposición, contribuyendo al reciclaje de nutrientes en ecosistemas naturales.", "imagen": "images/archaeognatha.jpg", "funFact": "Pueden saltar hasta 25 cm de altura, una distancia impresionante para su pequeño tamaño." },
                                 { "name": "Zygentoma", "commonName": "Zigéntomos", "level": "Orden", "icon": "🐜", "description": "Conocidos como pececillos de plata, son insectos ápteros con el cuerpo aplanado y cubierto de escamas que les dan un brillo metálico. Son de hábitos nocturnos y se mueven con gran rapidez. Se encuentran comúnmente en ambientes húmedos y oscuros, tanto en la naturaleza como en viviendas.", "importanciaAgricola": "Considerados plagas domésticas y de almacenamiento. Pueden dañar productos que contienen almidón o celulosa, como papel, encuadernaciones de libros, telas de algodón y alimentos secos. Su impacto en cultivos de campo es nulo.", "imagen": "images/zygentoma.jpg", "funFact": "Pueden vivir varios años y sobrevivir meses sin alimentarse." },
@@ -89,11 +89,11 @@
                             ]
                         },
                         {
-                            "name": "AgriculturalImportance",
+                            "name": "Relevancia en Agronomía",
                             "commonName": "Grupos de Importancia Agrícola",
                             "level": "Agrupación",
                             "icon": "🌾",
-                            "description": "Contiene una selección de los órdenes con mayor impacto en la agricultura, incluyendo ácaros.",
+                            "description": "Explora una selección de los órdenes de insectos de mayor impacto en la agricultura, abarcando tanto grupos beneficiosos como perjudiciales. Esta sección incluye además los ácaros, que, aunque no son insectos, son de vital importancia en agronomía y el manejo de cultivos.",
                             "children": [
                                 { "name": "Coleoptera", "commonName": "Coleópteros", "level": "Orden", "icon": "🐞", "importance": "agrícola", "description": "Es el orden más grande de todos los seres vivos (escarabajos, mariquitas). Su primer par de alas (élitros) está endurecido, formando un estuche que protege el segundo par de alas membranosas y el abdomen. Presentan una diversidad asombrosa de formas, tamaños y hábitos.", "agriculturalImportance": "Importancia inmensa y variada. Incluye plagas devastadoras (gorgojos, picudos) y grandes benefactores (mariquitas).", "imagen": "images/coleoptera.jpg", "funFact": "El escarabajo bombardero puede disparar un chorro químico hirviente y tóxico desde su abdomen para defenderse de los depredadores." },
                                 { "name": "Hemiptera", "commonName": "Hemípteros", "level": "Orden", "icon": "🐞", "importance": "agrícola", "description": "Incluye pulgones, cigarras, moscas blancas y cochinillas. Su característica común es un aparato bucal picador-chupador para succionar savia.", "agriculturalImportance": "Enorme importancia. Incluye muchísimas de las plagas más dañinas que debilitan las plantas y transmiten virus.", "imagen": "images/hemiptera.jpg", "funFact": "Las cigarras periódicas pueden vivir bajo tierra como ninfas durante 13 o 17 años antes de emerger como adultos." },
